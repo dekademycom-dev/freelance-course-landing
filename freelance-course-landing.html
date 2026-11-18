@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دوره جامع فریلنسری | از صفر به درآمد آنلاین</title>
+  <meta name="description" content="دوره جامع فریلنسری و درآمد آنلاین. از انتخاب مهارت تا پیدا کردن مشتری و رشد درآمد.">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Vazirmatn Persian Font -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Vazirmatn', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            neon: {
+              cyan:    '#00F5FF',
+              pink:    '#FF00E5',
+              purple:  '#A855F7',
+              blue:    '#3B82F6',
+              green:   '#A3E635',
+              amber:   '#FBBF24',
+            },
+            glass: {
+              dark:  'rgba(255,255,255,0.04)',
+              light: 'rgba(255,255,255,0.6)',
+            }
+          },
+          animation: {
+            'float':       'float 6s ease-in-out infinite',
+            'float-slow':  'float 9s ease-in-out infinite',
+            'pulse-glow':  'pulseGlow 3s ease-in-out infinite',
+            'gradient-x':  'gradientX 5s ease infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%':      { transform: 'translateY(-15px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '0.4', transform: 'scale(1)' },
+              '50%':      { opacity: '0.8', transform: 'scale(1.1)' },
+            },
+            gradientX: {
+              '0%, 100%': { 'background-position': '0% 50%' },
+              '50%':      { 'background-position': '100% 50%' },
+            },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Vazirmatn', sans-serif; overflow-x: hidden; }
+    *:not(.no-tr) { transition: background-color 0.4s ease, border-color 0.4s ease, color 0.25s ease; }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: #0A0A1A; }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #00F5FF, #A855F7);
+      border-radius: 10px;
+    }
+
+    /* ===== Glassmorphism ===== */
+    .glass {
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    .light .glass {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+    .glass-strong {
+      background: rgba(255, 255, 255, 0.07);
+      backdrop-filter: blur(24px) saturate(180%);
+      -webkit-backdrop-filter: blur(24px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .light .glass-strong {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    /* ===== Neon text glow ===== */
+    .neon-cyan-text {
+      color: #00F5FF;
+      text-shadow: 0 0 10px rgba(0, 245, 255, 0.7), 0 0 25px rgba(0, 245, 255, 0.4);
+    }
+    .neon-pink-text {
+      color: #FF00E5;
+      text-shadow: 0 0 10px rgba(255, 0, 229, 0.7), 0 0 25px rgba(255, 0, 229, 0.4);
+    }
+    .neon-purple-text {
+      color: #A855F7;
+      text-shadow: 0 0 10px rgba(168, 85, 247, 0.7), 0 0 25px rgba(168, 85, 247, 0.4);
+    }
+    .neon-green-text {
+      color: #A3E635;
+      text-shadow: 0 0 10px rgba(163, 230, 53, 0.7), 0 0 25px rgba(163, 230, 53, 0.4);
+    }
+
+    /* ===== Neon borders ===== */
+    .neon-border-cyan {
+      border: 1px solid rgba(0, 245, 255, 0.4);
+      box-shadow: 0 0 20px rgba(0, 245, 255, 0.2), inset 0 0 20px rgba(0, 245, 255, 0.05);
+    }
+    .neon-border-pink {
+      border: 1px solid rgba(255, 0, 229, 0.4);
+      box-shadow: 0 0 20px rgba(255, 0, 229, 0.2), inset 0 0 20px rgba(255, 0, 229, 0.05);
+    }
+    .neon-border-purple {
+      border: 1px solid rgba(168, 85, 247, 0.4);
+      box-shadow: 0 0 20px rgba(168, 85, 247, 0.2), inset 0 0 20px rgba(168, 85, 247, 0.05);
+    }
+
+    /* ===== Neon buttons ===== */
+    .btn-neon {
+      background: linear-gradient(135deg, #00F5FF 0%, #A855F7 100%);
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.5), 0 0 50px rgba(168, 85, 247, 0.3);
+      color: #0A0A1A;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .btn-neon:hover {
+      box-shadow: 0 0 35px rgba(0, 245, 255, 0.7), 0 0 70px rgba(168, 85, 247, 0.5);
+      transform: translateY(-3px);
+    }
+    .btn-neon-pink {
+      background: linear-gradient(135deg, #FF00E5 0%, #A855F7 100%);
+      box-shadow: 0 0 25px rgba(255, 0, 229, 0.5), 0 0 50px rgba(168, 85, 247, 0.3);
+      color: #fff;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+    .btn-neon-pink:hover {
+      box-shadow: 0 0 35px rgba(255, 0, 229, 0.7), 0 0 70px rgba(168, 85, 247, 0.5);
+      transform: translateY(-3px);
+    }
+
+    /* ===== Gradient text ===== */
+    .gradient-text-cyan {
+      background: linear-gradient(135deg, #00F5FF 0%, #A855F7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-pink {
+      background: linear-gradient(135deg, #FF00E5 0%, #A855F7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-rainbow {
+      background: linear-gradient(135deg, #00F5FF, #A855F7, #FF00E5, #00F5FF);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientX 5s ease infinite;
+    }
+
+    /* ===== Backgrounds ===== */
+    .bg-dark-main {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0, 245, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(255, 0, 229, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.1) 0%, transparent 60%),
+        #0A0A1A;
+    }
+    .light .bg-dark-main {
+      background:
+        radial-gradient(circle at 15% 20%, rgba(0, 245, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 85% 80%, rgba(255, 0, 229, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.15) 0%, transparent 60%),
+        #F0F4FF;
+    }
+
+    /* Animated grid pattern */
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .light .grid-pattern {
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    }
+
+    /* Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+    /* FAQ */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 300px;
+    }
+    .faq-item.active .faq-icon { transform: rotate(45deg); }
+    .faq-icon { transition: transform 0.3s ease; }
+
+    /* Pulse glow ring */
+    .pulse-ring {
+      animation: pulseRing 2.5s ease-out infinite;
+    }
+    @keyframes pulseRing {
+      0%   { box-shadow: 0 0 0 0 rgba(0, 245, 255, 0.5); }
+      70%  { box-shadow: 0 0 0 20px rgba(0, 245, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 245, 255, 0); }
+    }
+
+    /* Plan highlight */
+    .plan-highlight {
+      position: relative;
+      overflow: hidden;
+    }
+    .plan-highlight::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(135deg, #00F5FF, #A855F7, #FF00E5);
+      border-radius: inherit;
+      z-index: -1;
+      opacity: 0.8;
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.6; filter: blur(8px); }
+      50%      { opacity: 1; filter: blur(12px); }
+    }
+
+    /* Hide scrollbar in countdown */
+    .countdown-num { font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+
+<body class="bg-dark-main text-slate-100 dark:text-slate-100 light:text-slate-900 antialiased min-h-screen">
+
+  <!-- Grid pattern overlay -->
+  <div class="fixed inset-0 grid-pattern pointer-events-none z-0"></div>
+
+  <!-- =================== HEADER =================== -->
+  <header id="header" class="fixed top-0 w-full z-50 glass border-b border-white/10">
+    <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#home" class="flex items-center gap-3 group">
+        <div class="relative">
+          <div class="w-11 h-11 rounded-2xl flex items-center justify-center"
+               style="background: linear-gradient(135deg, #00F5FF, #A855F7); box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);">
+            <i class="fa-solid fa-rocket text-xl text-slate-900"></i>
+          </div>
+          <div class="absolute inset-0 rounded-2xl pulse-ring"></div>
+        </div>
+        <div>
+          <h1 class="text-xl font-bold leading-tight gradient-text-cyan">FreelancePro</h1>
+          <p class="text-[10px] tracking-widest text-slate-400">آکادمی فریلنسری</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <ul class="hidden lg:flex items-center gap-7 text-sm">
+        <li><a href="#home"      class="hover:text-neon-cyan transition">خانه</a></li>
+        <li><a href="#audience"  class="hover:text-neon-cyan transition">برای کیه؟</a></li>
+        <li><a href="#learn"     class="hover:text-neon-cyan transition">چه یاد می‌گیری؟</a></li>
+        <li><a href="#curriculum" class="hover:text-neon-cyan transition">سرفصل‌ها</a></li>
+        <li><a href="#pricing"   class="hover:text-neon-cyan transition">قیمت‌گذاری</a></li>
+        <li><a href="#faq"       class="hover:text-neon-cyan transition">سوالات</a></li>
+      </ul>
+
+      <!-- Actions -->
+      <div class="flex items-center gap-3">
+        <button id="theme-toggle" aria-label="تغییر تم"
+          class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:scale-110 transition">
+          <i class="fa-solid fa-sun text-amber-400 hidden dark:inline-block"></i>
+          <i class="fa-solid fa-moon text-slate-700 dark:hidden"></i>
+        </button>
+
+        <a href="#pricing"
+          class="hidden sm:inline-flex items-center gap-2 btn-neon px-5 py-2.5 rounded-xl text-sm">
+          <i class="fa-solid fa-bolt"></i>
+          ثبت‌نام سریع
+        </a>
+
+        <button id="mobile-toggle" class="lg:hidden w-10 h-10 rounded-xl glass flex items-center justify-center">
+          <i id="mobile-icon" class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="lg:hidden hidden border-t border-white/10">
+      <ul class="px-6 py-4 space-y-1 text-sm">
+        <li><a href="#home"       class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">خانه</a></li>
+        <li><a href="#audience"   class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">برای کیه؟</a></li>
+        <li><a href="#learn"      class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">چه یاد می‌گیری؟</a></li>
+        <li><a href="#curriculum" class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">سرفصل‌ها</a></li>
+        <li><a href="#pricing"    class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">قیمت‌گذاری</a></li>
+        <li><a href="#faq"        class="block py-3 px-3 rounded-lg hover:bg-white/5 transition">سوالات</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- =================== HERO =================== -->
+  <section id="home" class="relative min-h-screen flex items-center pt-24 pb-16 overflow-hidden">
+    <!-- Decorative blur orbs -->
+    <div class="absolute top-32 right-[10%] w-72 h-72 rounded-full blur-3xl animate-pulse-glow" style="background: rgba(0, 245, 255, 0.2);"></div>
+    <div class="absolute bottom-20 left-[10%] w-72 h-72 rounded-full blur-3xl animate-pulse-glow" style="background: rgba(255, 0, 229, 0.2); animation-delay: -1.5s;"></div>
+    <div class="absolute top-1/2 left-1/3 w-60 h-60 rounded-full blur-3xl animate-pulse-glow" style="background: rgba(168, 85, 247, 0.15); animation-delay: -3s;"></div>
+
+    <!-- Floating particles -->
+    <div class="absolute top-[20%] left-[15%] w-2 h-2 rounded-full bg-neon-cyan animate-float" style="box-shadow: 0 0 10px #00F5FF;"></div>
+    <div class="absolute top-[60%] right-[12%] w-2 h-2 rounded-full bg-neon-pink animate-float" style="box-shadow: 0 0 10px #FF00E5; animation-delay: -2s;"></div>
+    <div class="absolute bottom-[15%] left-[40%] w-1.5 h-1.5 rounded-full bg-neon-purple animate-float" style="box-shadow: 0 0 8px #A855F7; animation-delay: -4s;"></div>
+
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+
+      <!-- Left: Text Content -->
+      <div class="text-center lg:text-right">
+        <div class="reveal">
+          <span class="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full glass text-sm">
+            <i class="fa-solid fa-bolt neon-cyan-text"></i>
+            <span class="text-slate-300">پلتفرم آموزش فریلنسری فارسی</span>
+          </span>
+        </div>
+
+        <h1 class="reveal text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-[1.15]" style="transition-delay: 0.15s;">
+          از <span class="neon-cyan-text">صفر</span>،
+          <br>
+          به <span class="gradient-text-rainbow">درآمد آنلاین</span>
+        </h1>
+
+        <p class="reveal text-lg md:text-xl text-slate-300 dark:text-slate-300 light:text-slate-700 mb-8 max-w-xl mx-auto lg:mr-0 leading-relaxed" style="transition-delay: 0.3s;">
+          ۸ ماژول تخصصی، از انتخاب مهارت تا پیدا کردن اولین مشتری و رشد درآمد.
+          مسیر کامل، با پشتیبانی واقعی.
+        </p>
+
+        <!-- Countdown -->
+        <div class="reveal mb-8" style="transition-delay: 0.4s;">
+          <p class="text-sm text-slate-400 mb-3 flex items-center justify-center lg:justify-start gap-2">
+            <i class="fa-solid fa-hourglass-half neon-pink-text"></i>
+            تخفیف ۴۰٪ تا پایان:
+          </p>
+          <div class="flex gap-3 justify-center lg:justify-start">
+            <div class="glass rounded-2xl p-3 min-w-[70px] text-center">
+              <div id="cd-days" class="countdown-num text-2xl font-bold neon-cyan-text">۰۰</div>
+              <div class="text-[10px] text-slate-400 mt-1">روز</div>
+            </div>
+            <div class="glass rounded-2xl p-3 min-w-[70px] text-center">
+              <div id="cd-hours" class="countdown-num text-2xl font-bold neon-cyan-text">۰۰</div>
+              <div class="text-[10px] text-slate-400 mt-1">ساعت</div>
+            </div>
+            <div class="glass rounded-2xl p-3 min-w-[70px] text-center">
+              <div id="cd-mins" class="countdown-num text-2xl font-bold neon-cyan-text">۰۰</div>
+              <div class="text-[10px] text-slate-400 mt-1">دقیقه</div>
+            </div>
+            <div class="glass rounded-2xl p-3 min-w-[70px] text-center">
+              <div id="cd-secs" class="countdown-num text-2xl font-bold neon-pink-text">۰۰</div>
+              <div class="text-[10px] text-slate-400 mt-1">ثانیه</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" style="transition-delay: 0.5s;">
+          <a href="#pricing" class="btn-neon inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base">
+            <i class="fa-solid fa-rocket"></i>
+            همین حالا ثبت‌نام کن
+          </a>
+          <a href="#curriculum" class="glass-strong inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl text-base font-medium hover:scale-105 transition">
+            <i class="fa-solid fa-play neon-purple-text"></i>
+            مشاهده سرفصل‌ها
+          </a>
+        </div>
+
+        <!-- Trust badges -->
+        <div class="reveal mt-10 grid grid-cols-3 gap-4 max-w-md mx-auto lg:mr-0" style="transition-delay: 0.6s;">
+          <div class="text-center">
+            <p class="text-2xl font-bold neon-cyan-text">۲۵۰۰+</p>
+            <p class="text-xs text-slate-400">دانشجو</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold neon-pink-text">۸ ماژول</p>
+            <p class="text-xs text-slate-400">آموزش</p>
+          </div>
+          <div class="text-center">
+            <p class="text-2xl font-bold neon-purple-text">۴.۸</p>
+            <p class="text-xs text-slate-400">امتیاز</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: SVG Illustration -->
+      <div class="reveal hidden lg:flex justify-center" style="transition-delay: 0.5s;">
+        <div class="relative w-[480px] h-[480px]">
+          <!-- Glow behind -->
+          <div class="absolute inset-0 rounded-full blur-3xl opacity-50" style="background: radial-gradient(circle, #00F5FF, transparent);"></div>
+
+          <!-- Neon Laptop SVG -->
+          <svg viewBox="0 0 500 500" class="relative w-full h-full animate-float-slow">
+            <!-- Screen glow -->
+            <ellipse cx="250" cy="220" rx="200" ry="130" fill="url(#screenGlow)" opacity="0.3"/>
+
+            <!-- Laptop screen frame -->
+            <rect x="80" y="80" width="340" height="240" rx="16" fill="#1A1A2E" stroke="#00F5FF" stroke-width="2" filter="url(#neonGlow)"/>
+            <!-- Screen inner -->
+            <rect x="92" y="92" width="316" height="216" rx="8" fill="#0F0F23"/>
+
+            <!-- Code lines on screen -->
+            <g font-family="monospace" font-size="11" opacity="0.95">
+              <!-- Line 1 - purple comment -->
+              <text x="110" y="115" fill="#A855F7">// مسیر فریلنسری</text>
+              <!-- Line 2 -->
+              <rect x="108" y="125" width="4" height="12" fill="#00F5FF"/>
+              <text x="120" y="135" fill="#A3E635">const</text>
+              <text x="160" y="135" fill="#00F5FF">skill</text>
+              <text x="200" y="135" fill="#FF00E5">=</text>
+              <text x="215" y="135" fill="#FBBF24">"design"</text>
+              <!-- Line 3 -->
+              <text x="120" y="155" fill="#A3E635">const</text>
+              <text x="160" y="155" fill="#00F5FF">income</text>
+              <text x="215" y="155" fill="#FF00E5">=</text>
+              <text x="230" y="155" fill="#FBBF24">"20M+"</text>
+              <!-- Line 4 - comment -->
+              <text x="110" y="175" fill="#A855F7">// شروع کن</text>
+              <!-- Line 5 -->
+              <text x="120" y="195" fill="#A3E635">async function</text>
+              <text x="220" y="195" fill="#00F5FF">start</text>
+              <text x="260" y="195" fill="#FF00E5">()</text>
+              <text x="280" y="195" fill="#FF00E5">{</text>
+              <!-- Line 6 -->
+              <text x="135" y="215" fill="#A3E635">await</text>
+              <text x="180" y="215" fill="#00F5FF">buildPortfolio</text>
+              <text x="290" y="215" fill="#FF00E5">()</text>
+              <!-- Line 7 -->
+              <text x="135" y="235" fill="#A3E635">await</text>
+              <text x="180" y="235" fill="#00F5FF">findClients</text>
+              <text x="270" y="235" fill="#FF00E5">()</text>
+              <!-- Line 8 -->
+              <text x="135" y="255" fill="#A3E635">await</text>
+              <text x="180" y="255" fill="#00F5FF">grow</text>
+              <text x="220" y="255" fill="#FF00E5">()</text>
+              <!-- Line 9 -->
+              <text x="280" y="275" fill="#FF00E5">}</text>
+              <!-- Cursor -->
+              <rect x="120" y="280" width="6" height="12" fill="#00F5FF">
+                <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+              </rect>
+            </g>
+
+            <!-- Laptop base -->
+            <path d="M50 320 L450 320 L470 360 Q470 370 460 370 L40 370 Q30 370 30 360 Z" fill="#1A1A2E" stroke="#A855F7" stroke-width="2" filter="url(#neonGlow)"/>
+            <!-- Trackpad indent -->
+            <rect x="220" y="335" width="60" height="6" rx="2" fill="#0F0F23"/>
+
+            <!-- Floating money icon -->
+            <g transform="translate(380, 130)" class="animate-float">
+              <circle cx="0" cy="0" r="32" fill="#0F0F23" stroke="#A3E635" stroke-width="2" filter="url(#greenGlow)"/>
+              <text x="0" y="6" text-anchor="middle" font-family="Vazirmatn" font-size="22" font-weight="bold" fill="#A3E635">$</text>
+            </g>
+
+            <!-- Floating chart icon -->
+            <g transform="translate(100, 150)" class="animate-float" style="animation-delay: -2s;">
+              <circle cx="0" cy="0" r="28" fill="#0F0F23" stroke="#FF00E5" stroke-width="2" filter="url(#pinkGlow)"/>
+              <polyline points="-12,5 -4,-2 2,2 12,-8" fill="none" stroke="#FF00E5" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="-8" r="2" fill="#FF00E5"/>
+            </g>
+
+            <!-- Floating star icon -->
+            <g transform="translate(420, 280)" class="animate-float" style="animation-delay: -4s;">
+              <circle cx="0" cy="0" r="26" fill="#0F0F23" stroke="#FBBF24" stroke-width="2" filter="url(#amberGlow)"/>
+              <polygon points="0,-10 3,-3 10,-3 4,2 6,9 0,5 -6,9 -4,2 -10,-3 -3,-3" fill="#FBBF24"/>
+            </g>
+
+            <defs>
+              <radialGradient id="screenGlow">
+                <stop offset="0%" stop-color="#00F5FF"/>
+                <stop offset="100%" stop-color="#00F5FF" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+              <filter id="greenGlow"><feGaussianBlur stdDeviation="4"/></filter>
+              <filter id="pinkGlow"><feGaussianBlur stdDeviation="4"/></filter>
+              <filter id="amberGlow"><feGaussianBlur stdDeviation="4"/></filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <a href="#audience" class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 hover:text-neon-cyan transition animate-bounce">
+      <i class="fa-solid fa-chevron-down text-2xl"></i>
+    </a>
+  </section>
+
+  <!-- =================== AUDIENCE =================== -->
+  <section id="audience" class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-users neon-cyan-text"></i>
+          <span class="text-slate-300">این دوره برای کیه؟</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          اگر تو یکی از این <span class="gradient-text-cyan">سه نفر</span> هستی، درست جایی
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="reveal glass rounded-3xl p-8 hover:scale-105 transition-transform duration-300">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 neon-border-cyan">
+            <i class="fa-solid fa-seedling text-2xl neon-cyan-text"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">مبتدی کامل</h3>
+          <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed mb-4">
+            هیچ مهارتی نداری، هیچ درآمدی نداری. فقط یک کامپیوتر و اینترنت. مسیر از همان نقطه‌ی صفر شروع می‌شه.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-cyan-text text-xs"></i> انتخاب مهارت</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-cyan-text text-xs"></i> یادگیری اصولی</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-cyan-text text-xs"></i> ساخت پورتفولیو</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="reveal glass rounded-3xl p-8 hover:scale-105 transition-transform duration-300" style="transition-delay: 0.15s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 neon-border-pink">
+            <i class="fa-solid fa-laptop-code text-2xl neon-pink-text"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">دارای مهارت، بدون درآمد</h3>
+          <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed mb-4">
+            مهارت داری (طراحی، برنامه‌نویسی، تولید محتوا) ولی نمی‌دونی چطور مشتری پیدا کنی یا درآمدت رو رشد بدی.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-pink-text text-xs"></i> پیدا کردن مشتری</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-pink-text text-xs"></i> قیمت‌گذاری درست</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-pink-text text-xs"></i> مذاکره حرفه‌ای</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="reveal glass rounded-3xl p-8 hover:scale-105 transition-transform duration-300" style="transition-delay: 0.3s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6 neon-border-purple">
+            <i class="fa-solid fa-chart-line text-2xl neon-purple-text"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3">فریلنسر با درآمد کم</h3>
+          <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed mb-4">
+            درآمد داری ولی کمه. گیر کردی. می‌خوای به ۲۰ میلیون برسی و بیشتر. استراتژی رشد لازم داری.
+          </p>
+          <ul class="space-y-2 text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-purple-text text-xs"></i> استراتژی رشد</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-purple-text text-xs"></i> مشتری‌های VIP</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check neon-purple-text text-xs"></i> مقیاس‌پذیری</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== WHAT YOU'LL LEARN =================== -->
+  <section id="learn" class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-graduation-cap neon-purple-text"></i>
+          <span class="text-slate-300">چه چیزی یاد می‌گیری؟</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          ۶ مهارت <span class="gradient-text-pink">حیاتی</span> برای فریلنسر موفق
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Item 1 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-cyan/50 transition">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0, 245, 255, 0.1); border: 1px solid rgba(0, 245, 255, 0.3);">
+              <i class="fa-solid fa-brain neon-cyan-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">ذهنیت فریلنسری</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">تفکر صحیح درباره‌ی کار، زمان، ارزش و رشد.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-pink/50 transition" style="transition-delay: 0.1s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(255, 0, 229, 0.1); border: 1px solid rgba(255, 0, 229, 0.3);">
+              <i class="fa-solid fa-pen-ruler neon-pink-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">انتخاب مهارت</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">تشخیص مهارت پرتقاضا و مناسب برای تو.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-purple/50 transition" style="transition-delay: 0.2s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3);">
+              <i class="fa-solid fa-folder-open neon-purple-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">ساخت پورتفولیو</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">ساختن نمونه‌کارهایی که کارفرما رو می‌خروشه.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-cyan/50 transition">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0, 245, 255, 0.1); border: 1px solid rgba(0, 245, 255, 0.3);">
+              <i class="fa-solid fa-magnifying-glass neon-cyan-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">پیدا کردن مشتری</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">کانال‌های پیدا کردن مشتری در بازار ایران و جهانی.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-pink/50 transition" style="transition-delay: 0.1s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(255, 0, 229, 0.1); border: 1px solid rgba(255, 0, 229, 0.3);">
+              <i class="fa-solid fa-comments-dollar neon-pink-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">قیمت‌گذاری و مذاکره</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">چطور قیمت درست بذاری و ازش دفاع کنی.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 6 -->
+        <div class="reveal glass rounded-2xl p-6 hover:border-neon-purple/50 transition" style="transition-delay: 0.2s;">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3);">
+              <i class="fa-solid fa-rocket neon-purple-text text-xl"></i>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">رشد و مقیاس</h3>
+              <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600 leading-relaxed">از فریلنسر به آژانس و درآمد چند برابری.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== CURRICULUM =================== -->
+  <section id="curriculum" class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-list-check neon-cyan-text"></i>
+          <span class="text-slate-300">سرفصل‌های دوره</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          ۸ ماژول، <span class="gradient-text-cyan">مسیر کامل</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- Module 1 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #00F5FF, #A855F7); color: #0A0A1A; box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);">۰۱</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">ذهنیت فریلنسری</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">تغییر نگاه به کار، زمان، و ارزش. پایه‌ی همه‌چیز.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-cyan-text font-bold">۸ درس</p>
+            <p class="text-xs text-slate-500">۲ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.05s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #FF00E5, #A855F7); color: #fff; box-shadow: 0 0 20px rgba(255, 0, 229, 0.4);">۰۲</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">انتخاب مهارت</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">تحلیل بازار، تشخیص تقاضا، انتخاب مسیر درست.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-pink-text font-bold">۱۰ درس</p>
+            <p class="text-xs text-slate-500">۳ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.1s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #A855F7, #3B82F6); color: #fff; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);">۰۳</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">ساخت پورتفولیو</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">ساختن ۳ نمونه‌کار واقعی که می‌فروشه.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-purple-text font-bold">۱۲ درس</p>
+            <p class="text-xs text-slate-500">۴ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.15s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #A3E635, #00F5FF); color: #0A0A1A; box-shadow: 0 0 20px rgba(163, 230, 53, 0.4);">۰۴</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">پیدا کردن مشتری</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">پلتفرم‌ها، شبکه‌ها، و روش‌های ارتباط مستقیم.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-green-text font-bold">۱۴ درس</p>
+            <p class="text-xs text-slate-500">۴ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.2s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #FBBF24, #FF00E5); color: #0A0A1A; box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);">۰۵</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">قیمت‌گذاری و مذاکره</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">فرمول قیمت‌گذاری، تکنیک‌های مذاکره، قرارداد.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm text-amber-400 font-bold">۱۰ درس</p>
+            <p class="text-xs text-slate-500">۳ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 6 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.25s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #00F5FF, #A3E635); color: #0A0A1A; box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);">۰۶</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">مدیریت پروژه</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">ابزارها، سیستم‌ها، تحویل به‌موقع و باکیفیت.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-cyan-text font-bold">۹ درس</p>
+            <p class="text-xs text-slate-500">۳ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 7 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.3s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #A855F7, #FF00E5); color: #fff; box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);">۰۷</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">رابطه با مشتری</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">راضی نگه‌داشتن، دریافت بازخورد، پروژه‌های بعدی.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-purple-text font-bold">۷ درس</p>
+            <p class="text-xs text-slate-500">۲ ساعت</p>
+          </div>
+        </div>
+
+        <!-- Module 8 -->
+        <div class="reveal glass rounded-2xl p-6 flex items-center gap-6 hover:scale-[1.02] transition-transform" style="transition-delay: 0.35s;">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 text-2xl font-bold" style="background: linear-gradient(135deg, #FF00E5, #FBBF24); color: #fff; box-shadow: 0 0 20px rgba(255, 0, 229, 0.4);">۰۸</div>
+          <div class="flex-1">
+            <h3 class="font-bold mb-1">رشد و مقیاس</h3>
+            <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">تبدیل شدن به آژانس، تیم‌سازی، درآمد چند برابری.</p>
+          </div>
+          <div class="text-left">
+            <p class="text-sm neon-pink-text font-bold">۱۱ درس</p>
+            <p class="text-xs text-slate-500">۴ ساعت</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total summary -->
+      <div class="reveal mt-8 glass-strong rounded-2xl p-6 text-center">
+        <p class="text-slate-300 dark:text-slate-300 light:text-slate-700">
+          <span class="neon-cyan-text font-bold text-xl">۸۱ درس</span> ·
+          <span class="neon-pink-text font-bold text-xl">۲۵ ساعت</span> ·
+          <span class="neon-purple-text font-bold text-xl">۲۵۰۰+ دانشجو</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== INSTRUCTOR =================== -->
+  <section class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-5xl mx-auto">
+      <div class="reveal glass-strong rounded-3xl p-8 md:p-12 grid md:grid-cols-3 gap-8 items-center">
+        <!-- Avatar -->
+        <div class="text-center">
+          <div class="relative inline-block">
+            <div class="absolute inset-0 rounded-full blur-2xl opacity-70" style="background: linear-gradient(135deg, #00F5FF, #FF00E5);"></div>
+            <div class="relative w-40 h-40 rounded-full flex items-center justify-center text-5xl font-bold text-white"
+                 style="background: linear-gradient(135deg, #00F5FF, #A855F7, #FF00E5); box-shadow: 0 0 40px rgba(0, 245, 255, 0.6);">
+              ر
+            </div>
+            <!-- Verified badge -->
+            <div class="absolute bottom-2 right-2 w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center border-4 border-[#0A0A1A]" style="box-shadow: 0 0 15px rgba(59, 130, 246, 0.7);">
+              <i class="fa-solid fa-check text-white text-sm"></i>
+            </div>
+          </div>
+          <h3 class="text-2xl font-bold mt-6">رضا فرهمند</h3>
+          <p class="text-sm text-slate-400 dark:text-slate-400 light:text-slate-600">موسس آکادمی FreelancePro</p>
+        </div>
+
+        <!-- Bio -->
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold mb-4">
+            با <span class="gradient-text-cyan">۷ سال تجربه</span> فریلنسری
+          </h2>
+          <p class="text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed mb-6">
+            از سال ۱۳۹۷ وارد دنیای فریلنسری شدم. در این ۷ سال، بیش از ۳۰۰ پروژه انجام دادم، با ۱۲۰+ کارفرما کار کردم، و درآمد ماهانه‌ام را از ۲ میلیون به ۴۰+ میلیون تومان رساندم.
+            حالا تجربه‌هایم را در این دوره خلاصه کرده‌ام تا تو همان اشتباهات را نکنی.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <p class="text-2xl font-bold neon-cyan-text">۷ سال</p>
+              <p class="text-xs text-slate-400">تجربه</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold neon-pink-text">۳۰۰+</p>
+              <p class="text-xs text-slate-400">پروژه</p>
+            </div>
+            <div class="text-center">
+              <p class="text-2xl font-bold neon-purple-text">۴۰M</p>
+              <p class="text-xs text-slate-400">درآمد ماهانه</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== TESTIMONIALS =================== -->
+  <section class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-quote-right neon-pink-text"></i>
+          <span class="text-slate-300">نظر دانشجوها</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          آنچه از دوره <span class="gradient-text-pink">شنیده‌اند</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="reveal glass rounded-3xl p-8 relative">
+          <i class="fa-solid fa-quote-right absolute top-6 left-6 text-3xl opacity-20 neon-cyan-text"></i>
+          <div class="flex gap-1 mb-4 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed mb-6">
+            بعد از گذروندن ماژول ۴، در یک هفته اولین مشتری رو از پونیشا گرفتم. قیمت‌گذاری رو هم یاد گرفتم. الان ۲ برابر قبل می‌گیرم.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #00F5FF, #A855F7);">ا</div>
+            <div>
+              <p class="font-bold">آرش محمدی</p>
+              <p class="text-xs text-slate-500">طراح وب</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal glass rounded-3xl p-8 relative" style="transition-delay: 0.15s;">
+          <i class="fa-solid fa-quote-right absolute top-6 left-6 text-3xl opacity-20 neon-pink-text"></i>
+          <div class="flex gap-1 mb-4 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed mb-6">
+            پورتفولیوی که با کمک دوره ساختم، اولین پروژه ۸ میلیونی رو برام آورد. استاد فرهمند واقعاً تجربه‌شو منتقل می‌کنه، نه فقط تئوری.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #FF00E5, #A855F7);">م</div>
+            <div>
+              <p class="font-bold">مهسا کریمی</p>
+              <p class="text-xs text-slate-500">تولیدکننده محتوا</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal glass rounded-3xl p-8 relative" style="transition-delay: 0.3s;">
+          <i class="fa-solid fa-quote-right absolute top-6 left-6 text-3xl opacity-20 neon-purple-text"></i>
+          <div class="flex gap-1 mb-4 text-amber-400">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-slate-300 dark:text-slate-300 light:text-slate-700 leading-relaxed mb-6">
+            از درآمد ۳ میلیون به ۱۸ میلیون در ماه رسیدم. ماژول رشد و مقیاس، چشمم رو باز کرد. الان دارم به فکر تیم‌سازی می‌شم.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-full flex items-center justify-center font-bold text-white" style="background: linear-gradient(135deg, #A855F7, #3B82F6);">س</div>
+            <div>
+              <p class="font-bold">سامان رضایی</p>
+              <p class="text-xs text-slate-500">برنامه‌نویس</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== PRICING =================== -->
+  <section id="pricing" class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-tag neon-cyan-text"></i>
+          <span class="text-slate-300">قیمت‌گذاری</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          پلن مناسب <span class="gradient-text-cyan">خودت</span> رو انتخاب کن
+        </h2>
+
+        <!-- Toggle: One-time vs Installments -->
+        <div class="inline-flex items-center gap-3 glass rounded-full p-1.5 mt-8 reveal">
+          <button id="toggle-onetime" class="px-6 py-2 rounded-full text-sm font-medium transition bg-gradient-to-r from-cyan-400 to-purple-500 text-slate-900">
+            پرداخت یکجا
+          </button>
+          <button id="toggle-installment" class="px-6 py-2 rounded-full text-sm font-medium transition text-slate-300">
+            پرداخت اقساطی
+          </button>
+        </div>
+        <p id="discount-note" class="text-xs text-slate-400 mt-3">با پرداخت یکجا، ۲۰٪ تخفیف بگیر</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Plan 1: Silver -->
+        <div class="reveal glass rounded-3xl p-8 relative">
+          <div class="mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(168, 85, 247, 0.1); border: 1px solid rgba(168, 85, 247, 0.3);">
+              <i class="fa-solid fa-medal neon-purple-text text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">نقره‌ای</h3>
+            <p class="text-sm text-slate-400">شروع مسیر</p>
+          </div>
+
+          <div class="mb-6">
+            <span class="text-4xl font-bold" data-price-silver>۲٬۵۰۰٬۰۰۰</span>
+            <span class="text-slate-400 text-sm"> تومان</span>
+            <p class="text-xs text-slate-500 mt-1" data-period-silver>پرداخت یکجا</p>
+          </div>
+
+          <ul class="space-y-3 text-sm mb-8">
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-purple-text"></i> ۸ ماژول ویدیویی</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-purple-text"></i> دسترسی ۳ ماهه</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-purple-text"></i> گروه پشتیبانی</li>
+            <li class="flex items-center gap-2 text-slate-400 opacity-50"><i class="fa-solid fa-xmark"></i> کوچینگ گروهی</li>
+            <li class="flex items-center gap-2 text-slate-400 opacity-50"><i class="fa-solid fa-xmark"></i> قالب‌های آماده</li>
+          </ul>
+
+          <a href="#contact" class="block w-full glass-strong py-3 rounded-xl text-center font-medium hover:scale-105 transition">
+            انتخاب نقره‌ای
+          </a>
+        </div>
+
+        <!-- Plan 2: Gold (Recommended) -->
+        <div class="reveal plan-highlight rounded-3xl p-8 relative md:-mt-4 md:mb-4" style="transition-delay: 0.15s;">
+          <!-- Recommend badge -->
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="px-4 py-1 rounded-full text-xs font-bold text-slate-900" style="background: linear-gradient(135deg, #00F5FF, #A855F7); box-shadow: 0 0 20px rgba(0, 245, 255, 0.5);">
+              <i class="fa-solid fa-fire"></i> پیشنهادی
+            </span>
+          </div>
+
+          <div class="glass-strong rounded-3xl p-6 -m-2">
+            <div class="mb-6 mt-3">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(0, 245, 255, 0.1); border: 1px solid rgba(0, 245, 255, 0.3);">
+                <i class="fa-solid fa-crown neon-cyan-text text-xl"></i>
+              </div>
+              <h3 class="text-2xl font-bold mb-2">طلایی</h3>
+              <p class="text-sm text-slate-400">انتخاب populares</p>
+            </div>
+
+            <div class="mb-6">
+              <span class="text-4xl font-bold neon-cyan-text" data-price-gold>۴٬۵۰۰٬۰۰۰</span>
+              <span class="text-slate-400 text-sm"> تومان</span>
+              <p class="text-xs text-slate-500 mt-1" data-period-gold>پرداخت یکجا</p>
+            </div>
+
+            <ul class="space-y-3 text-sm mb-8">
+              <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-cyan-text"></i> همه‌ی ماژول‌ها</li>
+              <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-cyan-text"></i> دسترسی ۶ ماهه</li>
+              <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-cyan-text"></i> گروه VIP</li>
+              <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-cyan-text"></i> ۲ جلسه کوچینگ گروهی</li>
+              <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-cyan-text"></i> قالب‌های آماده</li>
+            </ul>
+
+            <a href="#contact" class="btn-neon block w-full py-3 rounded-xl text-center">
+              انتخاب طلایی
+            </a>
+          </div>
+        </div>
+
+        <!-- Plan 3: VIP -->
+        <div class="reveal glass rounded-3xl p-8 relative" style="transition-delay: 0.3s;">
+          <div class="mb-6">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style="background: rgba(255, 0, 229, 0.1); border: 1px solid rgba(255, 0, 229, 0.3);">
+              <i class="fa-solid fa-gem neon-pink-text text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">VIP</h3>
+            <p class="text-sm text-slate-400">حرفه‌ای‌ها</p>
+          </div>
+
+          <div class="mb-6">
+            <span class="text-4xl font-bold" data-price-vip>۸٬۵۰۰٬۰۰۰</span>
+            <span class="text-slate-400 text-sm"> تومان</span>
+            <p class="text-xs text-slate-500 mt-1" data-period-vip>پرداخت یکجا</p>
+          </div>
+
+          <ul class="space-y-3 text-sm mb-8">
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-pink-text"></i> همه‌ی ماژول‌ها</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-pink-text"></i> دسترسی مادام‌العمر</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-pink-text"></i> کوچینگ ۱ به ۱ (۴ جلسه)</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-pink-text"></i> معرفی به کارفرما</li>
+            <li class="flex items-center gap-2 text-slate-300 dark:text-slate-300 light:text-slate-700"><i class="fa-solid fa-check neon-pink-text"></i> ضمانت بازگشت وجه</li>
+          </ul>
+
+          <a href="#contact" class="block w-full glass-strong py-3 rounded-xl text-center font-medium hover:scale-105 transition">
+            انتخاب VIP
+          </a>
+        </div>
+      </div>
+
+      <!-- Money-back guarantee -->
+      <div class="reveal mt-12 text-center">
+        <div class="inline-flex items-center gap-3 glass px-6 py-3 rounded-full">
+          <i class="fa-solid fa-shield-halved neon-green-text text-xl"></i>
+          <span class="text-sm text-slate-300 dark:text-slate-300 light:text-slate-700">ضمانت ۳۰ روزه بازگشت وجه</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FAQ =================== -->
+  <section id="faq" class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-flex items-center gap-2 glass px-4 py-2 mb-4 rounded-full text-sm">
+          <i class="fa-solid fa-circle-question neon-purple-text"></i>
+          <span class="text-slate-300">سوالات متداول</span>
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          هرچی <span class="gradient-text-cyan">پرسیدی</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-cyan-text"></i>
+              آیا این دوره برای مبتدی‌های کامل مناسب است؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-cyan-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              بله، کاملاً. ماژول‌های ۱ و ۲ دقیقاً برای کسانی طراحی شده‌اند که هیچ مهارت یا تجربه‌ای ندارند. از انتخاب مهارت شروع می‌کنید و تا رسیدن به درآمد همراهتان هستیم.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden" style="transition-delay: 0.05s;">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-pink-text"></i>
+              چقدر طول می‌کشد دوره را تمام کنم؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-pink-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              مجموع ویدیوها ۲۵ ساعت است. اما با تمرین و پروژه‌های عملی، بین ۶ تا ۸ هفته زمان نیاز دارید تا تمام مطالب را یاد بگیرید و به کار ببندید. دسترسی حداقل ۳ ماهه است.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden" style="transition-delay: 0.1s;">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-purple-text"></i>
+              آیا گواهی پایان دوره دریافت می‌کنم؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-purple-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              بله. بعد از اتمام تمام ماژول‌ها و انجام پروژه نهایی، گواهی دیجیتال معتبر از آکادمی FreelancePro دریافت می‌کنید که در پورتفولیو و رزومه شما قابل استفاده است.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden" style="transition-delay: 0.15s;">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-cyan-text"></i>
+              اگر راضی نبودم چه؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-cyan-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              پلن VIP دارای ضمانت ۳۰ روزه بازگشت وجه است. اگر در ۳۰ روز اول راضی نبودید، کافی است یک ایمیل بزنید و کل مبلغ بدون هیچ سوال اضافه‌ای بازگردانده می‌شود.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden" style="transition-delay: 0.2s;">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-pink-text"></i>
+              روش‌های پرداخت چیست؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-pink-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              همه‌ی کارت‌های بانکی عضو شتاب، پرداخت از درگاه آنلاین، و برای پلن VIP، امکان پرداخت اقساطی (۴ قسط) نیز وجود دارد.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item reveal glass rounded-2xl overflow-hidden" style="transition-delay: 0.25s;">
+          <button class="faq-question w-full p-6 flex items-center justify-between text-right">
+            <span class="font-bold flex items-center gap-3">
+              <i class="fa-solid fa-circle-question neon-purple-text"></i>
+              آیا بعد از پایان دوره هم دسترسی دارم؟
+            </span>
+            <i class="faq-icon fa-solid fa-plus neon-purple-text"></i>
+          </button>
+          <div class="faq-answer px-6">
+            <p class="text-slate-400 dark:text-slate-400 light:text-slate-600 text-sm leading-relaxed pb-4">
+              پلن نقره‌ای: ۳ ماه، پلن طلایی: ۶ ماه، پلن VIP: مادام‌العمر. حتی بعد از اتمام دسترسی، تمام دانلودها و قالب‌هایی که دریافت کرده‌اید برای خودتان باقی می‌مانند.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FINAL CTA =================== -->
+  <section class="py-24 md:py-32 px-6 relative">
+    <div class="max-w-4xl mx-auto reveal">
+      <div class="relative glass-strong rounded-[2rem] p-10 md:p-16 text-center overflow-hidden">
+
+        <!-- Background glow -->
+        <div class="absolute -top-20 -right-20 w-72 h-72 rounded-full blur-3xl opacity-50" style="background: #00F5FF;"></div>
+        <div class="absolute -bottom-20 -left-20 w-72 h-72 rounded-full blur-3xl opacity-50" style="background: #FF00E5;"></div>
+
+        <div class="relative">
+          <div class="inline-flex items-center gap-2 glass px-4 py-2 mb-6 rounded-full text-sm">
+            <i class="fa-solid fa-fire neon-pink-text"></i>
+            <span class="text-slate-300">آخرین فرصت: تخفیف ۴۰٪</span>
+          </div>
+
+          <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+            همین امروز <span class="gradient-text-rainbow">مسیرت</span> رو شروع کن
+          </h2>
+          <p class="text-lg text-slate-300 dark:text-slate-300 light:text-slate-700 mb-8 max-w-xl mx-auto">
+            هر روزی که تأخیر کنی، یک روز درآمدت رو از دست می‌دی. الان زمان‌شه.
+          </p>
+
+          <!-- Mini countdown -->
+          <div class="flex gap-3 justify-center mb-8">
+            <div class="glass rounded-xl px-4 py-2 min-w-[60px]">
+              <div id="cd-days-2" class="countdown-num text-xl font-bold neon-cyan-text">۰۰</div>
+              <div class="text-[10px] text-slate-400">روز</div>
+            </div>
+            <div class="glass rounded-xl px-4 py-2 min-w-[60px]">
+              <div id="cd-hours-2" class="countdown-num text-xl font-bold neon-cyan-text">۰۰</div>
+              <div class="text-[10px] text-slate-400">ساعت</div>
+            </div>
+            <div class="glass rounded-xl px-4 py-2 min-w-[60px]">
+              <div id="cd-mins-2" class="countdown-num text-xl font-bold neon-pink-text">۰۰</div>
+              <div class="text-[10px] text-slate-400">دقیقه</div>
+            </div>
+          </div>
+
+          <a href="#pricing" class="btn-neon-pink inline-flex items-center gap-3 px-10 py-4 rounded-xl text-base">
+            <i class="fa-solid fa-rocket"></i>
+            ثبت‌نام در دوره
+          </a>
+
+          <p class="text-xs text-slate-500 mt-6">
+            <i class="fa-solid fa-shield-halved mr-1"></i>
+            پرداخت امن · ضمانت بازگشت وجه · پشتیبانی ۲۴/۷
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="py-12 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #00F5FF, #A855F7); box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);">
+              <i class="fa-solid fa-rocket text-slate-900"></i>
+            </div>
+            <span class="text-lg font-bold gradient-text-cyan">FreelancePro</span>
+          </div>
+          <p class="text-sm text-slate-400 leading-relaxed">آکادمی آموزش فریلنسری و درآمد آنلاین. از سال ۱۳۹۷ کنار تو هستیم.</p>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">دسترسی سریع</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#home"        class="hover:text-neon-cyan transition">خانه</a></li>
+            <li><a href="#curriculum"  class="hover:text-neon-cyan transition">سرفصل‌ها</a></li>
+            <li><a href="#pricing"     class="hover:text-neon-cyan transition">قیمت‌گذاری</a></li>
+            <li><a href="#faq"         class="hover:text-neon-cyan transition">سوالات</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold mb-4">شبکه‌های اجتماعی</h4>
+          <div class="flex gap-3">
+            <a href="#" aria-label="اینستاگرام" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-pink-500/20 hover:text-pink-400 transition">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" aria-label="تلگرام" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-sky-500/20 hover:text-sky-400 transition">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+            <a href="#" aria-label="یوتیوب" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-red-500/20 hover:text-red-400 transition">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="#" aria-label="آپارات" class="w-10 h-10 rounded-xl glass flex items-center justify-center hover:bg-orange-500/20 hover:text-orange-400 transition">
+              <i class="fa-brands fa-vimeo"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-slate-500">
+        <p>© ۱۴۰۴ FreelancePro. تمام حقوق محفوظ است.</p>
+        <p class="flex items-center gap-1.5">
+          ساخته شده با
+          <i class="fa-solid fa-heart text-pink-500"></i>
+          و کد خالص
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================== SCRIPTS =================== -->
+  <script>
+    // ---------- Theme Toggle ----------
+    const html = document.documentElement;
+    const themeToggle = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      html.classList.remove('dark');
+      html.classList.add('light');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      html.classList.toggle('light');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+
+    // ---------- Mobile Menu ----------
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu   = document.getElementById('mobile-menu');
+    const mobileIcon   = document.getElementById('mobile-icon');
+
+    mobileToggle.addEventListener('click', () => {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      mobileIcon.className = isOpen ? 'fa-solid fa-bars text-xl' : 'fa-solid fa-xmark text-xl';
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileIcon.className = 'fa-solid fa-bars text-xl';
+      });
+    });
+
+    // ---------- Header shadow on scroll ----------
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) header.classList.add('shadow-2xl');
+      else header.classList.remove('shadow-2xl');
+    });
+
+    // ---------- Reveal on scroll ----------
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ---------- Countdown ----------
+    // Target: 5 days from now (so it always shows a fresh countdown)
+    const target = new Date();
+    target.setDate(target.getDate() + 5);
+    target.setHours(23, 59, 59, 0);
+
+    function pad(n) { return String(n).padStart(2, '0'); }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const dist = target.getTime() - now;
+
+      if (dist < 0) return;
+
+      const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+      const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((dist % (1000 * 60)) / 1000);
+
+      const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = pad(val); };
+
+      setText('cd-days', d); setText('cd-hours', h); setText('cd-mins', m); setText('cd-secs', s);
+      setText('cd-days-2', d); setText('cd-hours-2', h); setText('cd-mins-2', m);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ---------- Pricing Toggle ----------
+    const prices = {
+      silver: { onetime: '۲٬۵۰۰٬۰۰۰', installment: '۴ × ۷۰۰٬۰۰۰' },
+      gold:   { onetime: '۴٬۵۰۰٬۰۰۰', installment: '۴ × ۱٬۲۰۰٬۰۰۰' },
+      vip:    { onetime: '۸٬۵۰۰٬۰۰۰', installment: '۴ × ۲٬۳۰۰٬۰۰۰' }
+    };
+
+    const toggleOnetime = document.getElementById('toggle-onetime');
+    const toggleInstallment = document.getElementById('toggle-installment');
+    const discountNote = document.getElementById('discount-note');
+
+    function setPricingMode(mode) {
+      // Update prices
+      document.querySelector('[data-price-silver]').textContent = prices.silver[mode];
+      document.querySelector('[data-price-gold]').textContent   = prices.gold[mode];
+      document.querySelector('[data-price-vip]').textContent    = prices.vip[mode];
+
+      // Update periods
+      document.querySelector('[data-period-silver]').textContent = mode === 'onetime' ? 'پرداخت یکجا' : '۴ قسط ماهانه';
+      document.querySelector('[data-period-gold]').textContent   = mode === 'onetime' ? 'پرداخت یکجا' : '۴ قسط ماهانه';
+      document.querySelector('[data-period-vip]').textContent    = mode === 'onetime' ? 'پرداخت یکجا' : '۴ قسط ماهانه';
+
+      // Update toggle button states
+      if (mode === 'onetime') {
+        toggleOnetime.classList.add('bg-gradient-to-r', 'from-cyan-400', 'to-purple-500', 'text-slate-900');
+        toggleOnetime.classList.remove('text-slate-300');
+        toggleInstallment.classList.remove('bg-gradient-to-r', 'from-cyan-400', 'to-purple-500', 'text-slate-900');
+        toggleInstallment.classList.add('text-slate-300');
+        discountNote.textContent = 'با پرداخت یکجا، ۲۰٪ تخفیف بگیر';
+      } else {
+        toggleInstallment.classList.add('bg-gradient-to-r', 'from-cyan-400', 'to-purple-500', 'text-slate-900');
+        toggleInstallment.classList.remove('text-slate-300');
+        toggleOnetime.classList.remove('bg-gradient-to-r', 'from-cyan-400', 'to-purple-500', 'text-slate-900');
+        toggleOnetime.classList.add('text-slate-300');
+        discountNote.textContent = 'پرداخت در ۴ قسط ماهانه، بدون بهره';
+      }
+    }
+
+    toggleOnetime.addEventListener('click', () => setPricingMode('onetime'));
+    toggleInstallment.addEventListener('click', () => setPricingMode('installment'));
+
+    // ---------- FAQ Accordion ----------
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasActive = item.classList.contains('active');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('active');
+        });
+
+        // Open this one if it was closed
+        if (!wasActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
